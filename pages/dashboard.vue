@@ -34,7 +34,7 @@ const handleSignoutClick = async () => {
   isLoading.value = true;
 
   try {
-    // const url = await googleApi().getGoogleAuthUrl();
+    // const url = await googleApi().revokeAccess();
     // navigateTo(url, { external: true });
 
     localStorage.removeItem("userId");

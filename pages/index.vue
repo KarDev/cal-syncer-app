@@ -1,13 +1,8 @@
 <template>
   <div>
-    <!-- <NuxtWelcome /> -->
-
     <p>Google Calendar API</p>
 
-    <!--Add buttons to initiate auth sequence and sign out-->
     <button @click="handleAuthClick">Authorize</button>
-
-    <!-- <button @click="handleSignoutClick">Sign Out</button> -->
   </div>
 </template>
 <script setup lang="ts">
@@ -29,6 +24,7 @@ onMounted(() => {
     navigateTo("/dashboard");
   }
 });
+
 const handleAuthClick = async () => {
   isLoading.value = true;
 
@@ -40,17 +36,4 @@ const handleAuthClick = async () => {
     isLoading.value = false;
   }
 };
-
-const handleSignoutClick = async () => {
-  isLoading.value = true;
-
-  try {
-    // const url = await googleApi().getGoogleAuthUrl();
-    // navigateTo(url, { external: true });
-  } finally {
-    isLoading.value = false;
-  }
-};
-
-const showEvents = async () => {};
 </script>
